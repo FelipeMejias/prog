@@ -56,7 +56,7 @@ height:100%;width:calc(100% - 80px);
   }
   }
   h6{
-  margin:0;color:blue;font-size:17px;font-weight:600;
+  margin:0;color:gray;font-size:17px;font-weight:600;
   }
 }
 `

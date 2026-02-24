@@ -43,8 +43,8 @@ h1{font-size:18px;font-weight:500;
   }
 section{
 height:100%;display:flex;
-  p{background:#001759;padding:5px 10px 5px 10px;border-radius:7px;
-  margin:0 7px 0 0;font-size:20px;font-weight:500;
+  p{background:var(--escurasso);padding:5px 10px 5px 10px;border-radius:7px;
+  margin:0 7px 0 0;font-size:18px;font-weight:400;
   }
 }
 `

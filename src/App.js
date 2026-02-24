@@ -26,7 +26,7 @@ export default function App() {
 }
 const Tela=styled.div`
 display:flex;
-background:#2e5cdb;
+background:var(--claro);
 height:100dvh;width:100vw;
 flex-direction:column;align-items:center;
 div{

@@ -17,17 +17,17 @@ export default function Menu() {
 }
 
 const Cab=styled.div`
-background:#103393;
+background:var(--escuro);
 height:70px;width:100%;
 justify-content:center;align-items:center;
 color:white;font-size:20px;padding:0 10px 0 10px;
 `
 const Opcao=styled.div`
-background:#103393;border-radius:10px;
+border-radius:10px;
 cursor:pointer;
 height:50px;width:20%;
 justify-content:center;align-items:center;
-color:${p=>p.selec?'#103393':'white'};
+color:${p=>p.selec?'var(--escuro)':'white'};
 background-color:${p=>p.selec?'white':'transparent'};
-font-size:15px;
+font-size:14px;
 `
