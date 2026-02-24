@@ -8,6 +8,8 @@ import { IoMdMail } from "react-icons/io";
 import { useState } from 'react';
 import { LuCopy } from "react-icons/lu";
 import { LuCopyCheck } from "react-icons/lu";
+import { IoMdDownload } from "react-icons/io";
+
 export default function Portfolio() {
   const [copW, setCopW] = useState(false);
   const [copL, setCopL] = useState(false);
@@ -52,6 +54,16 @@ export default function Portfolio() {
                   <IoMdMail />
                   <p>felipe.mejias50@gmail.com</p>
                   <BotCop onClick={copiarE}>{copE?<LuCopyCheck />:<LuCopy />}</BotCop>
+                </div>
+                <div >
+                  <main onClick={() => {
+    const link = document.createElement('a')
+    link.href = '/curriculo.pdf'
+    link.download = 'Curriculo-Felipe-Mejias.pdf'
+    link.click()
+  }} />
+                  <IoMdDownload />
+                  <p>Currículo</p>
                 </div>
             </section>
         </Projs>
