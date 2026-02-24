@@ -50,8 +50,10 @@ section{
 height:100%;width:calc(100% - 80px);
   p{margin:0;font-size:20px;font-weight:500;
   }
-  h5{font-size:18px;font-weight:400;
+  h5{
     margin:10px 0 10px 0;
+   font-size:14px;font-weight:300;
+  }
   }
   h6{
   margin:0;color:blue;font-size:17px;font-weight:600;
