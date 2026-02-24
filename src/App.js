@@ -6,6 +6,7 @@ import Menu from './Menu';
 import Formacao from './Formacao';
 import Experiencia from './Experiencia';
 import Perfil from './Perfil';
+import Stack from './Stack';
 
 export default function App() {
   return (
@@ -13,8 +14,9 @@ export default function App() {
     <Tela>
       <Menu/>
       <Routes>
-        <Route path='/' element={<Perfil/>}/>
+        <Route path='/stack' element={<Stack/>}/>
         <Route path='/portfolio' element={<Portfolio/>}/>
+        <Route path='/' element={<Perfil/>}/>
         <Route path='/formacao' element={<Formacao/>}/>
         <Route path='/experiencia' element={<Experiencia/>}/>
       </Routes>

@@ -6,7 +6,7 @@ import logo from '../imgs/logo.svg'
 export const portfolio=[
     {
       nome:"Video Notes",
-      link:"myvideonotes.vercel.app",
+      link:"videonotes.com.br",
       texto:`Website para visualizar e criar notas de tempo em cima de vídeos do Youtube. As notas levam diretamente ao segundo exato do vídeo, facilitando assim o estudo autodidata.`,
       img:videoNotes
     },

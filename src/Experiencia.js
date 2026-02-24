@@ -8,6 +8,7 @@ export default function Experiencia() {
       <Resto>
       <Projs>
         {experiencia.map(e=><Projeto>
+          {e.emAndamento?<h4>Em andamento</h4>:<></>}
             <article>
                 {e.icone}
                 <section>
@@ -25,6 +26,7 @@ export default function Experiencia() {
 }
 
 const Resto=styled.div`
+max-width:900px;
 height:calc(100% - 70px);width:100%;
 justify-content:center;align-items:center;
 `
@@ -42,7 +44,7 @@ margin-bottom:10px;
 flex-direction:column;
 width:calc(100% - 20px);
 justify-content:center;
-border-radius:10px;
+border-radius:10px;position:relative;
 color:black;font-size:45px;
 article{
 width:100%;display:flex;
@@ -55,10 +57,14 @@ height:100%;width:calc(100% - 120px);
     margin:5px 0 0px 0;
   }
   h6{
-  margin:0 0 5px 0;color:blue;font-size:17px;font-weight:600;
+  margin:0 0 5px 0;color:gray;font-size:17px;font-weight:600;
   }
   
 }
+  h4{background:#16a00c;position:absolute;right:5px;bottom:5px;
+  border-radius:20px;margin:0;color:white;
+  font-size:17px;font-weight:600;padding:5px 10px 5px 10px;
+  }
   p{margin:0;font-size:14px;font-weight:300;
   }
 `

@@ -6,8 +6,10 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { useState } from 'react';
-import { FaCopy } from "react-icons/fa";
+import { LuCopy } from "react-icons/lu";
+import { LuCopyCheck } from "react-icons/lu";
 export default function Portfolio() {
+  const [copW, setCopW] = useState(false);
   const [copL, setCopL] = useState(false);
   const [copE, setCopE] = useState(false);
   function copiarL(){
@@ -20,48 +22,54 @@ export default function Portfolio() {
       setCopE(true);setTimeout(() => setCopE(false), 1500)
     })
   };
-  
+  function copiarW(){
+    navigator.clipboard.writeText('21 984636151').then(() => {
+      setCopW(true);setTimeout(() => setCopW(false), 1500)
+    })
+  };
   return (
       <Resto>
         <Projs>
-          <article>
             <img src={foto}/>
             <section>
                 <h1>Felipe Luiz Mejias</h1>
                 <h2>Desenvolvedor Full-Stack</h2>
-                <div><FaLocationDot /><p>Rio de Janeiro - Barra da Tijuca</p></div>
-                <div><IoLogoWhatsapp /><p>21 984636151</p></div>
+                <aside><FaLocationDot /><p>Rio de Janeiro - Barra da Tijuca</p></aside>
+                <div  >
+                  <main onClick={()=>window.open(`https://wa.me/5521984636151`, "_blank")} />
+                  <IoLogoWhatsapp />
+                  <p>21 984636151</p>
+                  <BotCop onClick={copiarW}>{copW?<LuCopyCheck />:<LuCopy />}</BotCop>
+                  </div>
                 <div>
+                  <main onClick={()=>{window.open('https://linkedin.com/in/felipeluizmejias', "_blank");}} />
                   <FaLinkedin />
                   <p>linkedin.com/in/felipeluizmejias</p>
-                  <BotCop onClick={copiarL}>
-                    {copL?'Copiado!':'Copiar'}
-                  </BotCop>
+                  <BotCop onClick={copiarL}>{copL?<LuCopyCheck />:<LuCopy />}</BotCop>
                 </div>
-                <div>
+                <div >
+                  <main onClick={()=>{window.open('https://mail.google.com/mail/?view=cm&to=felipe.mejias50@gmail.com', "_blank");}} />
                   <IoMdMail />
                   <p>felipe.mejias50@gmail.com</p>
-                  <BotCop onClick={copiarE}>
-                    {copE?'Copiado!':'Copiar'}
-                  </BotCop>
+                  <BotCop onClick={copiarE}>{copE?<LuCopyCheck />:<LuCopy />}</BotCop>
                 </div>
             </section>
-        </article>
-          
         </Projs>
       </Resto>
   );
 }
 
 const Resto=styled.div`
+max-width:900px;
 height:calc(100% - 70px);width:100%;
 justify-content:center;align-items:center;
 `
 const BotCop=styled.button`
-height:30px;background:black;
-color:white;border-radius:15px;
-border:0;cursor:pointer;
-justify-content:center;
+position:absolute;right:-45px;
+height:40px;width:40px;background:#001759;
+color:white;border-radius:50%;
+border:0;cursor:pointer;font-size:18px;
+justify-content:center;padding-top:7px;
 align-items:center;
 `
 const Projs=styled.div`
@@ -72,26 +80,46 @@ overflow:auto;
 align-items:center;
 img{
 border-radius:50%;
-max-width:220px;
+max-width:200px;margin:5px 0 10px 0;
 width:calc(100% - 340px);
 }
-
-article{
-width:100%;display:flex;align-items:center;
-}
-section{margin-left:10px;
+section{align-items:center;text-align:center;
 height:100%;width:calc(100% - 120px);
   h1{margin:0;font-size:25px;font-weight:400;color:white;
   }
   h2{font-size:22px;font-weight:700;
-    margin:7px 0 0px 0;color:white;
+    margin:3px 0 0px 0;color:white;
   }
-  div{
+    aside{
+    display:flex;
     align-items:center;
+    justify-content:center;
     color:#103393;font-size:22px;
-    margin-top:12px;
+    margin-top:8px;
     p{
     color:white;font-size:17px;
+    margin: 0 5px 0 5px;
+      }
+  }
+  div{
+  position:relative;
+  margin: 0 auto;
+    width: fit-content;
+    align-items:center;
+    cursor:pointer;
+    height:40px;padding:0 10px 0 10px;
+    border-radius:20px;
+    justify-content:center;
+    background:#103393;
+    color:white;font-size:22px;
+    margin-top:15px;
+    main{
+    position:absolute;
+    height:100%;width:100%;
+    border-radius:20px;
+    }
+    p{
+    font-size:17px;
     margin: 0 5px 0 5px;
       }
   }

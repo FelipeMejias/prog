@@ -23,6 +23,7 @@ export default function Portfolio() {
 }
 
 const Resto=styled.div`
+max-width:900px;
 height:calc(100% - 70px);width:100%;
 justify-content:center;align-items:center;
 `
@@ -43,10 +44,10 @@ justify-content:center;
 border-radius:10px;
 color:black;font-size:20px;
 img{
-height:120px;margin-right:10px;border-radius:10px;
+height:80px;margin-right:10px;border-radius:10px;
 }
 section{
-height:100%;width:calc(100% - 120px);
+height:100%;width:calc(100% - 80px);
   p{margin:0;font-size:20px;font-weight:500;
   }
   h5{font-size:18px;font-weight:400;
