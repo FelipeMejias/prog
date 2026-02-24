@@ -52,7 +52,7 @@ height:100%;width:calc(100% - 80px);
   }
   h5{
     margin:10px 0 10px 0;
-   font-size:14px;font-weight:300;
+   font-size:16px;font-weight:300;
   }
   }
   h6{
